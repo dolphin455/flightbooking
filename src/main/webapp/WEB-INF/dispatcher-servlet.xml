@@ -37,11 +37,11 @@
 		</property>
 		<property name="annotatedClasses">
 			<list>
-				<value>com.flight.booking.user.entity.User</value>
-				<value>com.flight.booking.airline.entity.Airline</value>
-				<value>com.flight.booking.airport.entity.Airport</value>
-				<value>com.flight.booking.flight.entity.userbooking.UserBooking</value>
-				<value>com.flight.booking.seats.entity.Seat</value>
+				<value>com.flight.booking.entities.User</value>
+				<value>com.flight.booking.entities.Airline</value>
+				<value>com.flight.booking.entities.Airport</value>
+				<value>com.flight.booking.entities.UserBooking</value>
+				<value>com.flight.booking.entities.Seat</value>
 			</list>
 		</property>
 	</bean>

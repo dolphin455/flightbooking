@@ -1,3 +1,4 @@
+<%@page import="java.math.BigInteger"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
@@ -20,9 +21,14 @@
 	<div class="wrapper">
 		<div class="container tab-content">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<p class="navbar-brand">Booking Details</p>
-			<a href="flights">Go Search Flights</a>
+				<p class="navbar-brand">Booking Details</p>
+				<a href="flights" class="btn btn-secondary">Go Search Flights</a>
 			</nav>
+			<div class="row">
+				<div class="alert alert-success" role="alert">
+					Your booking is confirmed. Here is the details.
+				</div>
+			</div>
 			<div class="row">
 				<div class="col-lg-12">
 					<table class="table">
@@ -51,7 +57,10 @@
 							<td><%=item[16] %></td>
 							<td><span><%=item[10] %></span><br><span><%=item[11] %></span></td>
 							<td><span><%=item[12] %></span><br><span><%=item[13] %></span></td>
-							<td><%=item[1] %> x <%=item[8] %></td>
+							<td>
+								<span><%=item[1] %> x Rs <%=item[8] %> = 
+								Rs <%=((int)item[1] * ((BigInteger) item[8]).intValue()) %></span>
+							</td>
 						</tr>
 						<% } %>
 						</tbody>
